@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入urllib.request,os; pf 1234567891011121314151617181920## 安装插件按下ctrl+shift+P打开快速菜单，键入’pcip’： 回车，等待数据更新，完成后会主动显示软件列表。 在里面输入以下软件名称并回车进行安装： Markdown Editin">
+<meta name="description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入   1import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.r">
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text 3预览Markdown">
 <meta property="og:url" content="http://yoursite.com/2018/02/07/Sublime-Text-3预览Markdown/index.html">
 <meta property="og:site_name" content="裴鹏飞博客">
-<meta property="og:description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入urllib.request,os; pf 1234567891011121314151617181920## 安装插件按下ctrl+shift+P打开快速菜单，键入’pcip’： 回车，等待数据更新，完成后会主动显示软件列表。 在里面输入以下软件名称并回车进行安装： Markdown Editin">
+<meta property="og:description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入   1import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.r">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T03:06:35.288Z">
+<meta property="og:updated_time" content="2018-02-07T03:23:50.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime Text 3预览Markdown">
-<meta name="twitter:description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入urllib.request,os; pf 1234567891011121314151617181920## 安装插件按下ctrl+shift+P打开快速菜单，键入’pcip’： 回车，等待数据更新，完成后会主动显示软件列表。 在里面输入以下软件名称并回车进行安装： Markdown Editin">
+<meta name="twitter:description" content="Sublime Text 3预览Markdown安装控制器 按下按下ctrl+`出现小控制台  输入   1import urllib.request,os; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.r">
 
 
 
@@ -374,10 +374,18 @@
         <h1 id="Sublime-Text-3预览Markdown"><a href="#Sublime-Text-3预览Markdown" class="headerlink" title="Sublime Text 3预览Markdown"></a>Sublime Text 3预览Markdown</h1><h2 id="安装控制器"><a href="#安装控制器" class="headerlink" title="安装控制器"></a>安装控制器</h2><ol>
 <li><p>按下按下<strong>ctrl+`</strong>出现小控制台</p>
 </li>
-<li><p>输入<figure class="highlight plain"><figcaption><span>urllib.request,os; pf </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 安装插件</div><div class="line"></div><div class="line">按下ctrl+shift+P打开快速菜单，键入’pcip’： </div><div class="line"></div><div class="line">回车，等待数据更新，完成后会主动显示软件列表。 </div><div class="line"></div><div class="line">在里面输入以下软件名称并回车进行安装： </div><div class="line"></div><div class="line">Markdown Editing // Markdown编辑和语法高亮支持 </div><div class="line"></div><div class="line">Markdown Preview// Markdown导出html预览支持 </div><div class="line"></div><div class="line">auto-save // 可自定义的自动保存功能 </div><div class="line"></div><div class="line">耐心等待操作完成，之后关闭并重新打开Sublime Text 3</div><div class="line"></div><div class="line">## 绑定快捷键</div><div class="line"></div><div class="line">```&#123; &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview_select&quot;, &quot;args&quot;: &#123;&quot;target&quot;: &quot;browser&quot;&#125; &#125;</div></pre></td></tr></table></figure></p>
+<li><p>输入</p>
 </li>
 </ol>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), <span class="string">'wb'</span>).write(urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>,<span class="string">'%20'</span>)).<span class="built_in">read</span>())</div></pre></td></tr></table></figure>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>按下ctrl+shift+P打开快速菜单，键入’pcip’：</p>
+<p>回车，等待数据更新，完成后会主动显示软件列表。</p>
+<p>在里面输入以下软件名称并回车进行安装：</p>
+<p>Markdown Editing // Markdown编辑和语法高亮支持</p>
+<p>Markdown Preview// Markdown导出html预览支持</p>
+<p>auto-save // 可自定义的自动保存功能</p>
+<p>耐心等待操作完成，之后关闭并重新打开Sublime Text 3</p>
+<h2 id="绑定快捷键"><a href="#绑定快捷键" class="headerlink" title="绑定快捷键"></a>绑定快捷键</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"alt+m"</span>], <span class="string">"command"</span>: <span class="string">"markdown_preview_select"</span>, <span class="string">"args"</span>: &#123;<span class="string">"target"</span>: <span class="string">"browser"</span>&#125; &#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -606,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sublime-Text-3预览Markdown"><span class="nav-number">1.</span> <span class="nav-text">Sublime Text 3预览Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装控制器"><span class="nav-number">1.1.</span> <span class="nav-text">安装控制器</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sublime-Text-3预览Markdown"><span class="nav-number">1.</span> <span class="nav-text">Sublime Text 3预览Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装控制器"><span class="nav-number">1.1.</span> <span class="nav-text">安装控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装插件"><span class="nav-number">1.2.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定快捷键"><span class="nav-number">1.3.</span> <span class="nav-text">绑定快捷键</span></a></li></ol></li></ol></div>
             
 
           </div>
